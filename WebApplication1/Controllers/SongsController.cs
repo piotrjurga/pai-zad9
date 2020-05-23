@@ -61,6 +61,7 @@ namespace WebApplication1.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.Genres = db.Genres.ToList();
             return View(song);
         }
 
