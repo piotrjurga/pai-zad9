@@ -101,7 +101,7 @@ namespace WebApplication1.Controllers
             {
                 return HttpNotFound();
             }
-            genre.Songs = db.Songs.ToList().Where(song => song.GenreId == genre.Id).ToList();
+            genre.Songs = db.Songs.Where(song => song.GenreId == genre.Id).ToList();
             return View(genre);
         }
 
