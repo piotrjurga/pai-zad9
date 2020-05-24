@@ -24,7 +24,7 @@
                 @Html.DisplayFor(modelItem => item.Artist)
             </td>
             <td>
-                @Html.Raw(((IEnumerable<WebApplication1.Models.Genre>)ViewBag.Genres)
+                @Html.DisplayName(((IEnumerable<WebApplication1.Models.Genre>)ViewBag.Genres)
                     .Where(genre => genre.Id == item.GenreId).First().Name)
             </td>
             <td>
